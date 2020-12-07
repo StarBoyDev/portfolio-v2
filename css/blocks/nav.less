@@ -12,13 +12,12 @@
   text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
-
   transition: 0.2s;
   &:after {
     content: "";
     width: 0;
     height: 2px;
-    background-color: @black;
+    background-color: @main;
     position: absolute;
     bottom: -3px;
     left: 0;
@@ -26,19 +25,19 @@
     transition: width 0.2s linear;
   }
   &:hover:not(.nav__link--btn) {
-    border-color: @black;
+    border-color: @main;
     &:after {
       width: 100%;
     }
   }
   &--btn {
-    border: 2px solid @black;
+    border: 2px solid @main;
     padding: 0.66rem 2rem;
     border-radius: 20px;
     transition: background-color 0.2s linear, color 0.2s linear;
     &:hover {
       color: @white;
-      background-color: @black;
+      background-color: @main;
     }
   }
 }
