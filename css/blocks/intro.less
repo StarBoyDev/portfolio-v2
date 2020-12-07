@@ -1,16 +1,21 @@
 // main: ../styles.less
 
 .intro__inner {
+  position: relative;
   display: flex;
-  border-bottom: 1px solid fade(@grey, 30%);
+  border-bottom: 2px solid fade(@grey, 30%);
   padding-bottom: 120px;
-  padding-top: 100px;
+  padding-top: 110px;
+  background: url("../img/intro/symbols.png") right bottom no-repeat;
 }
 .intro__content {
   width: 50%;
 }
-.intro__photo {
-  width: 50%;
+.intro__img {
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  z-index: 1;
 }
 .intro__subtitle {
   font-size: 2.13rem;
@@ -18,10 +23,12 @@
   font-weight: 200;
 }
 .intro__title {
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 700;
   color: @black;
   margin-bottom: 5px;
+  font-family: "HKGrotesk-700", sans-serif;
+  font-feature-settings: "locl" 0;
 }
 .intro__text {
   font-size: 1.2rem;
