@@ -76,10 +76,47 @@ for (anchor of anchors) {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
       anchorId = this.getAttribute("href");
-      yOffset = -70; // задаете отступ
+      yOffset = -75; // задаете отступ
       element = document.querySelector(anchorId); // находим элемент до которого нужно прокручивать страницу
       y = element.getBoundingClientRect().top + window.pageYOffset + yOffset; // находим расстояние до элемента
       window.scrollTo({ top: y, behavior: "smooth" });
     });
   }
 }
+
+// Кнопка scroll-up
+const offset = 100;
+const scrollUp = document.querySelector(".scroll-up");
+const scrollUpSvgPath = document.querySelector(".scroll-up__svg-path");
+const pathLength = scrollUpSvgPath.getTotalLength();
+
+scrollUpSvgPath.style.strokeDasharray = `${pathLength} ${pathLength}`;
+scrollUpSvgPath.style.transition = "stroke-dashoffset 20ms";
+
+const getTop = () => window.pageYOffset || document.documentElement.scrollTop;
+
+// Заливка індикатору прокрутки
+const updateDashoffset = () => {
+  const height = document.documentElement.scrollHeight - window.innerHeight;
+  const dashoffset = pathLength - (getTop() * pathLength) / height;
+  scrollUpSvgPath.style.strokeDashoffset = dashoffset;
+};
+
+// Показання і приховування кнопки
+window.addEventListener("scroll", () => {
+  updateDashoffset();
+
+  if (getTop() > offset) {
+    scrollUp.classList.add("active");
+  } else {
+    scrollUp.classList.remove("active");
+  }
+});
+
+// Підняття екрану уверх по кліку
+scrollUp.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
