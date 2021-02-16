@@ -6,7 +6,11 @@
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 5px 15px -5px #00000070;
+  box-shadow: 0 0 4px fade(#000, 25%);
+  transition: box-shadow 0.2s linear;
+  &:hover {
+    box-shadow: 0 0 25px fade(#000, 25%);
+  }
 }
 .card__preview {
   position: relative;
@@ -16,7 +20,7 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  box-shadow: 0 5px 15px -5px #00000070;
+  box-shadow: 0 0 4px fade(#000, 25%);
 }
 .card__img {
   width: 100%;

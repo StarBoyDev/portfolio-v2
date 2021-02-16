@@ -10,6 +10,11 @@ body {
   margin: 0;
   font-size: 16px;
   color: @black;
+
+  // Клас для не можливості скроллу в модалці
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 h1,
 h2,
@@ -30,8 +35,7 @@ p {
 }
 .section-title {
   font-size: 2.5rem;
-  font-family: "HKGrotesk-700", sans-serif;
-  font-feature-settings: "locl" 0;
+  font-family: "Montserrat-700", sans-serif;
   text-align: center;
   margin-bottom: 50px;
 }

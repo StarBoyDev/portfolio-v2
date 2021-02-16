@@ -1,32 +1,55 @@
 // main: ../styles.less
-.modal-overlay {
+.modal-contact {
+  display: none;
   position: fixed;
+  width: 100%;
+  height: 100%;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  // background-color: rgba(52, 152, 219, 0.4);
-  background-color: fade(@main, 80%);
+  background-color: fade(#042e4acc, 80%);
   z-index: 100;
+  &.show {
+    display: flex;
+  }
 }
 .modal-contact__dialog {
-  width: 600px;
-  background-color: @bgc;
-  padding: 30px 80px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  margin: auto;
+  max-width: 600px;
+  background-color: @white;
+  padding: 36px 66px;
   border-radius: 4px;
   z-index: 101;
+
+  // Анімація виклику модалки
+  transform: scale(0);
+  transition: transform 0.2s linear;
 }
-.modal-contact__ico {
-  width: 20px;
-  height: 20px;
+.modal-contact__close {
+  background: none;
+  border: none;
+  cursor: pointer;
   position: absolute;
   right: 15px;
   top: 15px;
   z-index: 300;
+  transition: transform 0.2s linear;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  // Забираємо рамку при кліку
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+.modal-contact__close-ico {
+  width: 20px;
+  height: 20px;
 }
 .modal-contact__wrapper {
   display: flex;
@@ -35,36 +58,74 @@
 .contact-modal__form {
   display: flex;
   flex-direction: column;
+  margin-top: 42px;
 }
 .modal-contact__title {
-  text-align-last: left;
+  text-transform: uppercase;
+  text-align: left;
   margin-bottom: 0;
 }
 .modal-contact__subtitle {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
+.modal-contact__communication {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.modal-contact__ico {
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+}
+.modal-contact__svg {
+  width: 100%;
+  height: 100%;
+}
+.modal-contact__info {
+  font-weight: 300;
+  font-size: 16px;
+  text-decoration: none;
+  color: @black;
+  transition: 0.2s linear;
+  &:hover {
+    color: @main;
+  }
+}
 .modal-contact__input {
   width: 100%;
-  border: none;
   outline: none;
-  background: none;
-  height: 40px;
+  padding: 15px 18px;
   margin-bottom: 15px;
   font-size: 15px;
-  color: @grey;
+  border: 2px solid fade(#707070, 30%);
+  border-radius: 20px;
+  transition: border-color 0.2s linear;
+  font-weight: 300;
+  &:focus {
+    outline: none;
+    border-color: @main;
+  }
 }
 .modal-contact__message {
-  border: none;
+  padding: 12px 18px;
   resize: none;
-  background: none;
   width: 100%;
-  height: 100px;
+  font-weight: 300;
+  height: 200px;
   margin-bottom: 15px;
-  color: @grey;
+  font-size: 15px;
   outline: none;
+  border: 2px solid fade(#707070, 30%);
+  border-radius: 20px;
+  transition: border-color 0.2s linear;
+  &:focus {
+    outline: none;
+    border-color: @main;
+  }
 }
 .modal__btn {
   width: 50%;
