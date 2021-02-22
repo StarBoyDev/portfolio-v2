@@ -148,3 +148,6 @@ scrollUp.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// AOS
+AOS.init();
