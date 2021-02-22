@@ -66,6 +66,34 @@ $(document).ready(function () {
   $(".modal-contact__dialog").on("click", function (event) {
     event.stopPropagation();
   });
+
+  // form validation
+  $(".modal-contact__form").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+        name: {
+          required: "Пожалуйста, введите Ваше имя",
+          minlength: "Имя должно состоять не менее чем из 4 букв.",
+        },
+        phone: {
+          required: "Телефон обязателен",
+          number: "Телефон должен состоять только из цифр",
+          minlength: "Номер телефона должен составлять не менее 5 цифр",
+        },
+      },
+      rules: {
+        phone: {
+          required: true,
+          minlength: 5,
+        },
+        name: {
+          required: true,
+          minlength: 4,
+        },
+      },
+    });
+  });
 });
 
 // Плавний скролл по секціям

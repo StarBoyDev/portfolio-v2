@@ -5,14 +5,12 @@
 
 $name = $_POST['name'];
 $phone = $_POST['phone'];
-$email = $_POST['email'];
 $message = $_POST['message'];
 $token = "1629599817:AAE5JwPvUfHwqgcCqKXMyLaz23cvIgMPpyU";
 $chat_id = "-526669109";
 $arr = array(
   'Имя пользователя: ' => $name,
   'Телефон: ' => $phone,
-  'Email' => $email
   'Cообщение' => $message
 );
 
