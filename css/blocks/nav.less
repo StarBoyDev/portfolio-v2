@@ -31,6 +31,11 @@
     }
   }
   &--btn {
+    margin-left: 2rem;
+    font-size: 0.93rem;
+    color: @black;
+    text-transform: uppercase;
+    font-weight: 700;
     background: none;
     display: block;
     position: relative;
@@ -66,5 +71,32 @@
     &:focus {
       outline: none;
     }
+  }
+}
+
+// Media
+@media (max-width: 992px) {
+  .nav {
+    justify-content: space-between;
+  }
+  .header__inner {
+    display: block;
+  }
+  .nav__link {
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .nav__link {
+    display: none;
+  }
+  .nav__link--btn {
+    display: block;
+    margin-left: 0;
+    padding: 0.66rem 1.4rem;
+  }
+  .header__inner {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }

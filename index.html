@@ -2,7 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=0"
+    />
     <title>Taras K. - Portfolio</title>
 
     <!-- Fonts -->
@@ -47,10 +50,7 @@
             <a class="nav__link" href="#about-me">Обо мне</a>
             <a class="nav__link" href="#portfolio">Проекты</a>
             <a class="nav__link" href="#features">Преимущества</a>
-            <button
-              data-modal="#modal-contact"
-              class="nav__link nav__link--btn"
-            >
+            <button data-modal="#modal-contact" class="nav__link--btn">
               Связаться
             </button>
           </nav>
@@ -580,7 +580,7 @@
 
     <!-- modal-contact -->
     <div class="modal-contact" id="modal-contact">
-      <div class="modal-contact__dialog">
+      <div class="modal-dialog">
         <button type="submit" class="modal-contact__close" data-close>
           <img
             class="modal-contact__close-ico"
@@ -654,6 +654,19 @@
     <!-- /.modal-contact -->
 
     <!-- modal-burger -->
+    <div class="modal-contact">
+      <div class="modal-dialog">
+        <button type="submit" class="modal-contact__close" data-close>
+          <img
+            class="modal-contact__close-ico"
+            src="img/close.svg"
+            alt="icon: close"
+          />
+        </button>
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal-contact -->
 
     <!-- scroll up -->
     <div class="scroll-up">

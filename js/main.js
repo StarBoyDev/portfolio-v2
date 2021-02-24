@@ -20,7 +20,7 @@ $(document).ready(function () {
     //  Затримка анімації
     setTimeout(function () {
       //  Анімація вкилику
-      $(modalId).find(".modal-contact__dialog").css({
+      $(modalId).find(".modal-dialog").css({
         transform: "scale(1)",
       });
     }, 200);
@@ -34,7 +34,7 @@ $(document).ready(function () {
     let modalParent = $this.parents(".modal-contact");
 
     //  Анімація зариття
-    modalParent.find(".modal-contact__dialog").css({
+    modalParent.find(".modal-dialog").css({
       transform: "scale(0)",
     });
 
@@ -50,7 +50,7 @@ $(document).ready(function () {
   $(".modal-contact ").on("click", function (event) {
     let $this = $(this);
     //  Анімація зариття
-    $this.find(".modal-contact__dialog").css({
+    $this.find(".modal-dialog").css({
       transform: "scale(0)",
     });
 
@@ -63,7 +63,7 @@ $(document).ready(function () {
   });
 
   //   Робимо так, щоб при кліку на саму модалку, наприкалд для заповнення форми вона не закривалсь
-  $(".modal-contact__dialog").on("click", function (event) {
+  $(".modal-dialog").on("click", function (event) {
     event.stopPropagation();
   });
 

@@ -1,0 +1,22 @@
+// main: ../styles.less
+.burger-menu {
+  display: none;
+}
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    background: @white;
+  }
+  .burger-menu__line {
+    width: 32px;
+    height: 2px;
+    background-color: #000;
+  }
+}
