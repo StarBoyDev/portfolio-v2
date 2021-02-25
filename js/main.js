@@ -94,6 +94,16 @@ $(document).ready(function () {
       },
     });
   });
+
+  // Активація Бургер-меню
+  $(".burger-menu").click(function (event) {
+    $(".burger-menu, .nav__wrapper, .burger-menu__line").toggleClass("active");
+    $("body").toggleClass("no-scroll");
+  });
+  // Усуваємо клас "active" при натисканні по пункту меню в бургері
+  $(".nav__link").click(function (event) {
+    $(".burger-menu, .nav__wrapper, .burger-menu__line").removeClass("active");
+  });
 });
 
 // Плавний скролл по секціям

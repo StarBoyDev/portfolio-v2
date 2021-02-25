@@ -6,6 +6,7 @@
   .burger-menu {
     display: block;
     position: relative;
+    z-index: 130;
     width: 30px;
     height: 20px;
     background: none;
@@ -20,12 +21,24 @@
       width: 100%;
       height: 2px;
       left: 0;
+      // Плавність переходу
+      transition: all 0.3s ease 0s;
     }
     &:before {
       top: 0;
     }
     &:after {
       bottom: 0;
+    }
+
+    // Перевертання ліній бургера в хрестик
+    &.active:before {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+    &.active:after {
+      transform: rotate(-45deg);
+      bottom: 9px;
     }
   }
   .burger-menu__line {
@@ -35,5 +48,12 @@
     width: 100%;
     height: 2px;
     top: 9px;
+    // Плавність переходу
+    transition: all 0.3s ease 0s;
+
+    // Усуваємо лінію яка мішає
+    &.active {
+      transform: scale(0);
+    }
   }
 }
