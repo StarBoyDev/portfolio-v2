@@ -100,8 +100,12 @@ $(document).ready(function () {
     $(".burger-menu, .nav__wrapper, .burger-menu__line").toggleClass("active");
     $("body").toggleClass("no-scroll");
   });
-  // Усуваємо клас "active" при натисканні по пункту меню в бургері
+  // Закриваємо меню при натисканні по пункту меню в бургері
   $(".nav__link").click(function (event) {
+    $(".burger-menu, .nav__wrapper, .burger-menu__line").removeClass("active");
+  });
+  // Закриваємо меню при кліку по кнопці звязатись
+  $(".nav__link--btn").click(function (event) {
     $(".burger-menu, .nav__wrapper, .burger-menu__line").removeClass("active");
   });
 });
