@@ -136,14 +136,12 @@ scrollUpSvgPath.style.strokeDasharray = `${pathLength} ${pathLength}`;
 scrollUpSvgPath.style.transition = "stroke-dashoffset 20ms";
 
 const getTop = () => window.pageYOffset || document.documentElement.scrollTop;
-
 // Заливка індикатору прокрутки
 const updateDashoffset = () => {
   const height = document.documentElement.scrollHeight - window.innerHeight;
   const dashoffset = pathLength - (getTop() * pathLength) / height;
   scrollUpSvgPath.style.strokeDashoffset = dashoffset;
 };
-
 // Показання і приховування кнопки
 window.addEventListener("scroll", () => {
   updateDashoffset();
@@ -154,7 +152,6 @@ window.addEventListener("scroll", () => {
     scrollUp.classList.remove("active");
   }
 });
-
 // Підняття екрану уверх по кліку
 scrollUp.addEventListener("click", () => {
   window.scrollTo({
