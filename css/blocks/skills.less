@@ -4,14 +4,24 @@
 }
 .skills__wrapper {
   display: flex;
-  position: relative;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+  margin: 0 -10px;
+}
+.skills__column {
+  flex: 0 1 50%;
+  padding: 0 10px;
+  margin-bottom: 70px;
 }
 .skills__title {
   margin-bottom: 10px;
 }
 .skills__card {
-  min-height: 566px;
+  height: 100%;
+}
+
+// Media
+@media (max-width: 991px) {
+  .skills__wrapper {
+    flex-direction: column;
+  }
 }

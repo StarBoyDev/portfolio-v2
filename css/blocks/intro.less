@@ -5,19 +5,24 @@
 .intro__inner {
   position: relative;
   display: flex;
+  align-items: center;
   border-bottom: 2px solid fade(@grey, 30%);
-  padding-bottom: 120px;
-  padding-top: 110px;
-  background: url("../img/intro/symbols.png") right bottom no-repeat;
+  padding-bottom: 30px;
+  padding-top: 140px;
 }
 .intro__content {
-  width: 50%;
+  margin-right: 160px;
+}
+.intro__photo {
+  flex: 0 0 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 15px #000;
 }
 .intro__img {
-  position: absolute;
-  bottom: -3px;
-  right: 0;
-  z-index: 1;
+  max-width: 100%;
+  margin-top: -50px;
 }
 .intro__subtitle {
   font-size: 2.13rem;
@@ -42,11 +47,51 @@
   color: @grey;
   font-weight: 300;
   margin-bottom: 25px;
+  max-width: 600px;
 }
 
 // Media
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .intro__inner {
-    padding-top: 70px;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .intro__content {
+    margin-right: 0;
+  }
+  .intro__photo {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-bottom: 30px;
+  }
+  .intro__text {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .intro {
+    margin-bottom: 100px;
+  }
+  .intro__inner {
+    padding-top: 100px;
+  }
+  .intro__photo {
+    width: 170px;
+    height: 170px;
+  }
+  .intro__img {
+    margin-top: -30px;
+  }
+  .intro__subtitle {
+    font-size: 1.8rem;
+  }
+  .intro__title {
+    font-size: 2.7rem;
+  }
+  .intro__profession {
+    font-size: 1.1rem;
+  }
+  .intro__text {
+    font-size: 1.1rem;
   }
 }
