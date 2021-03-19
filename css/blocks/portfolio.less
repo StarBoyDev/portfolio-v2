@@ -11,10 +11,19 @@
   flex: 0 1 50%;
   padding: 0 10px;
   margin-bottom: 70px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
+
 // media
 @media (max-width: 992px) {
   .portfolio__wrapper {
     flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .portfolio {
+    margin-bottom: 80px;
   }
 }
