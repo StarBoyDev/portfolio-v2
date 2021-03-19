@@ -103,6 +103,7 @@ $(document).ready(function () {
   // Закриваємо меню при натисканні по пункту меню в бургері
   $(".nav__link").click(function (event) {
     $(".burger-menu, .nav__wrapper, .burger-menu__line").removeClass("active");
+    $("body").removeClass("no-scroll");
   });
   // Закриваємо меню при кліку по кнопці звязатись
   $(".nav__link--btn").click(function (event) {

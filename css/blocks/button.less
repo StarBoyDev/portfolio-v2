@@ -28,11 +28,13 @@
     transition: 0.9s all ease;
     transform: translate(-50%, -50%) rotate(45deg);
   }
-  &:hover {
-    color: @black;
-    background-color: @white;
-  }
-  &:hover::before {
-    height: 700%;
+  @media (min-width: 992px) {
+    &:hover {
+      color: @black;
+      background-color: @white;
+    }
+    &:hover::before {
+      height: 700%;
+    }
   }
 }

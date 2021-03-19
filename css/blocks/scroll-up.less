@@ -28,8 +28,10 @@
     content: "🠕";
   }
 
-  &:hover {
-    color: @main;
+  @media (min-width: 992px) {
+    &:hover {
+      color: @main;
+    }
   }
 
   &.active {

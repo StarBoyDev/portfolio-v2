@@ -26,12 +26,15 @@
     z-index: 1;
     transition: width 0.2s linear;
   }
-  &:hover:not(.nav__link--btn) {
-    border-color: @main;
-    &:after {
-      width: 100%;
+  @media (min-width: 992px) {
+    &:hover:not(.nav__link--btn) {
+      border-color: @main;
+      &:after {
+        width: 100%;
+      }
     }
   }
+
   &--btn {
     margin-left: 2rem;
     font-size: 0.93rem;
@@ -64,14 +67,15 @@
       height: 0;
       transform: translate(-50%, -50%) rotate(45deg);
     }
-    &:hover {
-      color: @white;
-      background-color: @main;
+    @media (min-width: 992px) {
+      &:hover {
+        color: @white;
+        background-color: @main;
+      }
+      &:hover:before {
+        height: 360%;
+      }
     }
-    &:hover:before {
-      height: 360%;
-    }
-
     // Забираємо лишню рамку при кліку
     &:active,
     &:focus {

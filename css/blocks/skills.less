@@ -11,9 +11,6 @@
   flex: 0 1 50%;
   padding: 0 10px;
   margin-bottom: 70px;
-  &:last-child {
-    margin-bottom: 0px;
-  }
 }
 .skills__title {
   margin-bottom: 10px;
@@ -30,6 +27,11 @@
   }
   .skills__text {
     text-align: center;
+  }
+  .skills__column {
+    &:last-child {
+      margin-bottom: 0px;
+    }
   }
 }
 @media (max-width: 768px) {

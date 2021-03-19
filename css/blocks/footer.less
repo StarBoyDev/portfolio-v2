@@ -20,8 +20,10 @@
   margin-right: 15px;
   transition: transform 0.2s linear;
 
-  &:hover {
-    transform: translateY(-5px);
+  @media (min-width: 992px) {
+    &:hover {
+      transform: translateY(-5px);
+    }
   }
 
   &:nth-child(3) {
