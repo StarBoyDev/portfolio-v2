@@ -13,7 +13,7 @@
   max-width: 380px;
   overflow: hidden;
   position: relative;
-  border-radius: 40px;
+  border-radius: 30%;
 }
 .about-me__img {
   width: 100%;
@@ -38,6 +38,11 @@
   font-weight: 300;
   line-height: 2.2;
   color: @grey;
+  margin-bottom: 30px;
+}
+.about-me__link {
+  color: @grey;
+  margin-right: 30px;
 }
 
 // Media
@@ -53,15 +58,26 @@
   .about-me__info {
     text-align: center;
     max-width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+  }
+  .about-me__photo {
+    max-width: 300px;
   }
   .about-me__title {
     text-align: center;
   }
+  .about-me__text {
+    margin-bottom: 10px;
+  }
 }
+
+// Media
 @media (max-width: 768px) {
   .about-me {
     margin-bottom: 80px;
+  }
+  .about-me__photo {
+    max-width: 250px;
   }
   .about-me__title {
     font-size: 2rem;
@@ -72,5 +88,23 @@
   }
   .about-me__text {
     font-size: 14px;
+  }
+
+  .about-me__links {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+  }
+}
+@media (max-width: 450px) {
+  .about-me__text {
+    margin-bottom: 10px;
+  }
+  .about-me__links {
+    flex-direction: column;
+  }
+  .about-me__link {
+    margin-bottom: 15px;
+    margin-right: 0;
   }
 }
