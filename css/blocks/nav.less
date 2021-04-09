@@ -15,14 +15,6 @@
   transition: 0.2s;
   position: relative;
   z-index: 150;
-  @media (min-width: 992px) {
-    &:hover:not(.nav__btn) {
-      border-color: @main;
-      &:after {
-        width: 100%;
-      }
-    }
-  }
   &:after {
     content: "";
     width: 0;
@@ -33,6 +25,14 @@
     left: 0;
     z-index: 1;
     transition: width 0.2s linear;
+  }
+  @media (min-width: 992px) {
+    &:hover {
+      border-color: @main;
+      &:after {
+        width: 100%;
+      }
+    }
   }
 }
 .nav__btn {
@@ -51,7 +51,6 @@
   border-radius: 20px;
   transition: 0.9s all ease;
   cursor: pointer;
-
   &.disable {
     display: none;
   }
